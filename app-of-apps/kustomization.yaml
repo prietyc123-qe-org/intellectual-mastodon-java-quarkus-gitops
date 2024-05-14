@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: intellectual-mastodon-java-quarkus 
+  janus-idp.io/tekton: intellectual-mastodon-java-quarkus
+  backstage.io/kubernetes-id: intellectual-mastodon-java-quarkus
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: intellectual-mastodon-java-quarkus
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
